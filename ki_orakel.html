@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Orakel Wahrsager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #222;
+            color: #fff;
+        }
+        .box {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            display: inline-block;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: #ffcc00;
+            color: #222;
+        }
+        button:hover {
+            background: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🔮 KI-Orakel Wahrsager 🔮</h1>
+        <p id="prophecy">Klicke auf den Button für deine Zukunftsvorhersage!</p>
+        <button onclick="generateProphecy()">Orakel befragen</button>
+    </div>
+    
+    <script>
+        function generateProphecy() {
+            const prophecies = [
+                "Du wirst heute noch eine verrückte Entscheidung treffen!",
+                "Die KI hat berechnet: Du solltest noch ein Bier trinken!",
+                "Fehlermeldung: Deine Zukunft ist zu chaotisch!",
+                "Achtung: Jemand wird heute versuchen, dich zu beeindrucken!",
+                "Du wirst heute mindestens einmal über einen schlechten Witz lachen!",
+                "Dein nächster Drink wird entweder dein bester – oder dein letzter!",
+                "KI berechnet... Berechnung fehlgeschlagen. Genieße einfach den Abend!",
+                "Heute ist dein Glückstag! Falls nicht, reklamiere bei der KI!",
+                "Jemand wird heute versuchen, dich zum Tanzen zu bringen!",
+                "Die KI sagt: Versuch es noch einmal – vielleicht klappt’s dieses Mal!"
+            ];
+            
+            const randomIndex = Math.floor(Math.random() * prophecies.length);
+            document.getElementById("prophecy").innerText = prophecies[randomIndex];
+        }
+    </script>
+</body>
+</html>
